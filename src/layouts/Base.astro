@@ -31,7 +31,6 @@ const nav = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href={url('rss.xml')} />
     <link rel="sitemap" href={url('sitemap-index.xml')} />
     <meta name="theme-color" content="#0b2a47" />
     <meta name="generator" content={Astro.generator} />
@@ -85,8 +84,6 @@ const nav = [
         <div class="footer-links">
           <a href={LINKS.linkedin} rel="noopener" target="_blank"><Icon name="linkedin" size={18} /> LinkedIn</a>
           <a href={LINKS.x} rel="noopener" target="_blank"><Icon name="x" size={18} /> X / Twitter</a>
-          <a href={LINKS.malt} rel="noopener" target="_blank"><Icon name="briefcase" size={18} /> Malt</a>
-          <a href={url('rss.xml')}><Icon name="rss" size={18} /> Flux RSS</a>
         </div>
       </div>
       <div class="container footer-bottom mono">

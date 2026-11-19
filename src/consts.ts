@@ -9,7 +9,6 @@ export const SITE_DESCRIPTION =
   'Groupement de Dev et Ops freelance, spécialistes cloud computing, CI/CD, DevOps et infrastructures innovantes.';
 
 export const LINKS = {
-  malt: 'https://www.malt.fr/wishlists/build-and-run/5a781b98db554c21c69fddbc',
   linkedin: 'https://www.linkedin.com/company/build-and-run-fr/',
   x: 'https://x.com/buildAndRunFR',
   slack: 'http://bit.ly/BaR2020',
