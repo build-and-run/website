@@ -1,9 +1,7 @@
 import type { ImageMetadata } from 'astro';
 import alexis from './assets/team/alexis-ducastel.png';
 import ivan from './assets/team/ivan-beaute.png';
-import renald from './assets/team/renald-koch.png';
 import frederic from './assets/team/frederic-leger.jpg';
-import denis from './assets/team/denis-garcia.jpg';
 import emilien from './assets/team/emilien-escalle.jpg';
 
 export const SITE_TITLE = 'Build and Run';
@@ -74,22 +72,10 @@ export const TEAM: Member[] = [
     tags: ['ci/cd', 'docker', 'cloud'],
   },
   {
-    name: 'Renald Koch',
-    photo: renald,
-    bio: 'Administrateur systèmes et réseaux Linux, j’interviens ponctuellement sur vos systèmes d’information en cas de dysfonctionnement ou pour faire évoluer votre plateforme, ou en partenariat sur le long terme en infogérance.',
-    tags: ['cloud', 'web', 'réactivité'],
-  },
-  {
     name: 'Frederic Leger',
     photo: frederic,
     bio: 'Ops avec un gros historique web haute performance, spécialiste des systèmes distribués et automatisés. Fan de cloud, de DevOps, de streaming vidéo et de chatbots.',
     tags: ['cloud', 'devops', 'architecture'],
-  },
-  {
-    name: 'Denis Garcia',
-    photo: denis,
-    bio: 'Data Architect expérimenté dans l’industrie logicielle : business process, e-commerce, architecture d’entreprise, méthodes agiles et stratégie IT.',
-    tags: ['architecture', 'applications', 'data'],
   },
   {
     name: 'Emilien Escalle',
