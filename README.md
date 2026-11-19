@@ -4,7 +4,10 @@ Site vitrine du groupement [Build and Run](https://www.build-and-run.fr), constr
 
 ## Développement
 
+Les versions des outils (Node) sont fixées dans `mise.toml`, utilisé aussi par la CI.
+
 ```sh
+mise install     # installe la version de Node épinglée
 npm install
 npm run dev      # http://localhost:4321
 npm run build    # génère ./dist
