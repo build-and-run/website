@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { url } from '../consts';
+---
+
+<Base title="Page introuvable">
+  <PageHeader eyebrow="$ curl -I → 404" title="Cette page n'existe pas (ou plus).">
+    <p class="meta mono">Error: route not found. Rollback recommandé.</p>
+    <p><a href={url('/')} class="btn btn-primary">Retour à l'accueil</a></p>
+  </PageHeader>
+</Base>

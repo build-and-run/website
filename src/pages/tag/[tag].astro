@@ -1,0 +1,25 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import PostList from '../../components/PostList.astro';
+import { slugify } from '../../utils';
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('blog')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  const tags = new Map<string, string>();
+  for (const p of posts) for (const t of p.data.tags) tags.set(slugify(t), t);
+  return [...tags].map(([tag, label]) => ({
+    params: { tag },
+    props: { label, posts: posts.filter((p) => p.data.tags.some((t) => slugify(t) === tag)) },
+  }));
+}
+
+const { tag } = Astro.params;
+const { label, posts } = Astro.props as { label: string; posts: CollectionEntry<'blog'>[] };
+---
+
+<Base title={`#${label}`} description={`Articles étiquetés « ${label} ».`}>
+  <PageHeader eyebrow="// étiquette" title={`#${label}`} />
+  <PostList posts={posts} current={tag} />
+</Base>

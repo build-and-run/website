@@ -1,0 +1,119 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Icon from '../components/Icon.astro';
+import { LINKS } from '../consts';
+
+const channels = [
+  {
+    icon: 'linkedin',
+    title: 'LinkedIn',
+    text: 'Écrivez-nous directement sur la page de la société.',
+    href: LINKS.linkedin,
+    cta: 'Envoyer un message',
+  },
+  {
+    icon: 'briefcase',
+    title: 'Malt',
+    text: 'Retrouvez nos profils et lancez une mission en quelques clics.',
+    href: LINKS.malt,
+    cta: 'Voir nos profils',
+  },
+  {
+    icon: 'slack',
+    title: 'open-BaR',
+    text: 'Notre Slack communautaire : venez discuter DevOps avec nous.',
+    href: LINKS.slack,
+    cta: 'Rejoindre le Slack',
+  },
+  {
+    icon: 'x',
+    title: 'X / Twitter',
+    text: 'Suivez nos actus et envoyez-nous un message privé.',
+    href: LINKS.x,
+    cta: '@buildAndRunFR',
+  },
+];
+---
+
+<Base title="Contact" description="Contactez le groupement build-and-run pour votre projet cloud, DevOps ou infogérance.">
+  <PageHeader eyebrow="// contact" title="Parlons de votre projet">
+    <p class="meta">
+      Un besoin en architecture cloud, CI/CD, maintenance ou supervision ? Une envie de rejoindre le groupement ?
+      Choisissez le canal qui vous convient, on vous répond rapidement.
+    </p>
+  </PageHeader>
+
+  <div class="container grid">
+    {
+      channels.map((c) => (
+        <a class="channel" href={c.href} target="_blank" rel="noopener">
+          <span class="icon">
+            <Icon name={c.icon} size={24} />
+          </span>
+          <h2>{c.title}</h2>
+          <p>{c.text}</p>
+          <span class="cta">
+            {c.cta} <Icon name="arrow" size={16} />
+          </span>
+        </a>
+      ))
+    }
+  </div>
+</Base>
+
+<style>
+  .meta {
+    max-width: 640px;
+    font-size: 1.1rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+    gap: 20px;
+    padding-block: 56px 96px;
+  }
+  .channel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 28px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    transition:
+      transform 0.2s,
+      border-color 0.2s;
+  }
+  .channel:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--lime) 60%, var(--border));
+  }
+  .icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: var(--navy-900);
+    color: var(--lime);
+    margin-bottom: 8px;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  p {
+    margin: 0;
+    color: var(--muted);
+  }
+  .cta {
+    margin-top: auto;
+    padding-top: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--accent-text);
+  }
+</style>
