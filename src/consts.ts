@@ -6,7 +6,7 @@ import emilien from './assets/team/emilien-escalle.jpg';
 
 export const SITE_TITLE = 'Build and Run';
 export const SITE_DESCRIPTION =
-  'Groupement de DevOps freelance, spécialistes cloud computing, CI/CD, DevOps et infrastructures innovantes.';
+  'Groupement de Dev et Ops freelance, spécialistes cloud computing, CI/CD, DevOps et infrastructures innovantes.';
 
 export const LINKS = {
   malt: 'https://www.malt.fr/wishlists/build-and-run/5a781b98db554c21c69fddbc',
@@ -60,16 +60,10 @@ export type Member = {
 
 export const TEAM: Member[] = [
   {
-    name: 'Alexis Ducastel',
-    photo: alexis,
-    bio: 'Architecte infrastructure DevOps, technophile passionné, fondateur d’infraBuilder et organisateur du meetup « DevOps Aix-Marseille ».',
-    tags: ['devops', 'technophile', 'passionné'],
-  },
-  {
-    name: 'Ivan Beauté',
-    photo: ivan,
-    bio: 'DevOps évangéliste, j’ai toujours été passionné par le monde des développeurs et du système. Je m’efforce de promouvoir les bonnes pratiques DevOps dans la région d’Aix-Marseille.',
-    tags: ['ci/cd', 'docker', 'cloud'],
+    name: 'Emilien Escalle',
+    photo: emilien,
+    bio: 'CTO et architecte fullstack, je vous apporte mon expertise pour relever les défis de vos projets numériques : architecture, organisation et stratégie.',
+    tags: ['cto', 'architecte', 'fullstack'],
   },
   {
     name: 'Frederic Leger',
@@ -78,9 +72,15 @@ export const TEAM: Member[] = [
     tags: ['cloud', 'devops', 'architecture'],
   },
   {
-    name: 'Emilien Escalle',
-    photo: emilien,
-    bio: 'CTO et architecte fullstack, je vous apporte mon expertise pour relever les défis de vos projets numériques : architecture, organisation et stratégie.',
-    tags: ['cto', 'architecte', 'fullstack'],
+    name: 'Ivan Beauté',
+    photo: ivan,
+    bio: 'DevOps évangéliste, j’ai toujours été passionné par le monde des développeurs et du système. Je m’efforce de promouvoir les bonnes pratiques DevOps dans la région d’Aix-Marseille.',
+    tags: ['ci/cd', 'docker', 'cloud'],
+  },
+  {
+    name: 'Alexis Ducastel',
+    photo: alexis,
+    bio: 'Architecte infrastructure DevOps, technophile passionné, fondateur d’infraBuilder et organisateur du meetup « DevOps Aix-Marseille ».',
+    tags: ['devops', 'technophile', 'passionné'],
   },
 ];
