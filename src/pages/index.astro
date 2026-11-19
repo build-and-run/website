@@ -1,12 +1,8 @@
 ---
 import { Image } from 'astro:assets';
-import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
-import PostCard from '../components/PostCard.astro';
 import { SERVICES, PORTFOLIO, TEAM, LINKS, url } from '../consts';
-
-const posts = (await getCollection('blog')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 3);
 ---
 
 <Base overlay>
@@ -125,21 +121,6 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.date.valueOf()
             <span class="tag">#freelance</span><span class="tag">#ops</span><span class="tag">#aix-marseille</span>
           </div>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section alt">
-    <div class="container">
-      <div class="section-head row">
-        <div>
-          <p class="eyebrow">// blog</p>
-          <h2>Derniers articles</h2>
-        </div>
-        <a href={url('/blog/')} class="more">Tous les articles <Icon name="arrow" size={16} /></a>
-      </div>
-      <div class="posts">
-        {posts.map((p) => <PostCard post={p} />)}
       </div>
     </div>
   </section>
@@ -407,32 +388,6 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.date.valueOf()
     border-width: 2px;
   }
 
-  .row {
-    max-width: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-  .more {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 600;
-    color: var(--accent-text);
-    text-decoration: none;
-  }
-  .posts {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .alt,
-  .cta-wrap {
-    background: color-mix(in srgb, var(--border) 45%, var(--bg));
-  }
   .cta-wrap {
     padding-top: 0;
   }
@@ -463,9 +418,6 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.date.valueOf()
     .services,
     .portfolio {
       grid-template-columns: repeat(2, 1fr);
-    }
-    .posts {
-      grid-template-columns: 1fr;
     }
   }
   @media (max-width: 600px) {
