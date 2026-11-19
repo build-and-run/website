@@ -16,10 +16,7 @@ npm run preview
 | Quoi | Où |
 | --- | --- |
 | Services, portfolio, équipe, liens | `src/consts.ts` |
-| Articles du blog (Markdown) | `src/content/blog/*.md` |
 | Photos de l'équipe | `src/assets/team/` |
-
-Ajouter un article : créer `src/content/blog/mon-slug.md` (frontmatter : `title`, `description`, `date`, `author`, `tags`). Il sera publié sur `/mon-slug/`, comme les URLs de l'ancien WordPress.
 
 ## Déploiement
 
