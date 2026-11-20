@@ -1,6 +1,6 @@
 # build-and-run.fr
 
-Site vitrine du groupement [Build and Run](https://www.build-and-run.fr), construit avec [Astro](https://astro.build) et publié sur GitHub Pages.
+Site vitrine du groupement [Build and Run](https://build-and-run.fr), construit avec [Astro](https://astro.build) et publié sur GitHub Pages.
 
 ## Développement
 
